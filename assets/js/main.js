@@ -66,9 +66,9 @@ window.addEventListener('DOMContentLoaded', function(){
     function animLogo() {
         console.log('animation logo');
 
-        // logoAnim.set(logo, {
-        //     opacity: 1
-        // });
+        logoAnim.set(logo, {
+            opacity: 1
+        });
 
         logoAnim.from(logo, video.duration, {
             opacity: 0,
