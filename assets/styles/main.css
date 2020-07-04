@@ -50,6 +50,10 @@ button {
     visibility: hidden;
 }
 
+.hidden {
+    display: none;
+}
+
 .logo {
     width: 25vw;
 }

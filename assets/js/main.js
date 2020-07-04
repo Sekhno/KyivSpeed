@@ -2,6 +2,7 @@ window.addEventListener('DOMContentLoaded', function(){
     console.log('DOMContentLoaded');
 
     var video = document.getElementById('video'),
+        canvas = document.getElementById('canvas'),
         enter = document.getElementById('enter'),
         buttons = document.querySelectorAll('.buttons'),
         promise = video.play(),
@@ -17,11 +18,14 @@ window.addEventListener('DOMContentLoaded', function(){
     
     console.log(video.getBoundingClientRect());
 
+    
+
     if (promise !== undefined) {
         promise.then(_ => {
             // Autoplay started!
             console.log('Autoplay started!');
             logoAnim.from(logo, video.duration, {
+                opacity: 0,
                 scale: 0.4,
                 ease: easeInOut,
                 delay: 1,
@@ -29,6 +33,9 @@ window.addEventListener('DOMContentLoaded', function(){
                 transformOrigin: 'bottom', 
                 transformStyle: 'preserve-3d'
             });
+            console.log(video.videoWidth);
+
+            paintVideo();
             
         }).catch(error => {
             console.log(error);
@@ -39,6 +46,7 @@ window.addEventListener('DOMContentLoaded', function(){
                 video.play();
                 this.style.visibility = 'hidden';
                 this.removeEventListener('click', listener, false);
+
             }, false)
         });
     }
@@ -65,29 +73,25 @@ window.addEventListener('DOMContentLoaded', function(){
         }
     }, false);
 
-    video.addEventListener('ended', function () {
+    video.addEventListener('ended', function listener() {
         console.log('Ended!')
         this.currentTime = 0;
         this.loop = true;
         this.play();
-
-        // revealAnim.fromTo(
-        //     buttons, {
-        //         opacity: 0,
-        //     }, {
-        //         opacity: 1,
-        //         duration: .3,
-        //         ease: easeInOut
-        //     }
-        // );
+        this.removeEventListener('ended', listener, false);
     }, false);
     
     
 
-    
-    
-    
-
-
+    function paintVideo() {
+        if (canvas) {
+            canvas.width = video.videoWidth = window.innerWidth;
+            canvas.height = video.videoHeight = window.innerHeight;
+            canvas.getContext('2d').drawImage(video, 0, 0, canvas.width, canvas.height);
+            if (!video.paused) {
+                requestAnimationFrame(paintVideo);
+            }
+        }
+    }
     
 })
