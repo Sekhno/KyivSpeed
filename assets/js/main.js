@@ -64,7 +64,7 @@ window.addEventListener('DOMContentLoaded', function(){
     }
 
     function animLogo() {
-        console.log('animation logo');
+        console.log('animation logo!!!');
 
         logoAnim.set(logo, {
             opacity: 1
@@ -82,6 +82,7 @@ window.addEventListener('DOMContentLoaded', function(){
     }
 
     function animButtons() {
+        console.log('animation buttons');
         buttonsAnim.fromTo(
             buttons, {
                 opacity: 0,
