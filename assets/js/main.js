@@ -18,10 +18,6 @@ window.addEventListener('DOMContentLoaded', function(){
     
     console.log(video.getBoundingClientRect());
 
-    logoAnim.set(logo, {
-        opacity: 0
-    });
-
     if (promise !== undefined) {
         promise.then(_ => {
             // Autoplay started!
@@ -33,7 +29,7 @@ window.addEventListener('DOMContentLoaded', function(){
             console.log(error);
             // Autoplay was prevented.
             // Show a "Play" button so that user can start playback.
-            // animLogo();
+            animLogo();
             animButtons();
         });
     }
@@ -66,19 +62,28 @@ window.addEventListener('DOMContentLoaded', function(){
     function animLogo() {
         console.log('animation logo!!!');
 
-        logoAnim.set(logo, {
-            opacity: 1
-        });
+        
 
-        logoAnim.from(logo, video.duration, {
-            opacity: 0,
-            scale: 0.4,
-            ease: easeInOut,
-            delay: 1,
-            rotationX: 270,
-            transformOrigin: 'bottom',
-            transformStyle: 'preserve-3d'
-        });
+        // logoAnim.from(logo, video.duration, {
+        //     opacity: 0,
+        //     scale: 0.4,
+        //     ease: easeInOut,
+        //     delay: -1,
+        //     rotationX: 270,
+        //     transformOrigin: 'bottom',
+        //     transformStyle: 'preserve-3d'
+        // });
+        logoAnim.fromTo(
+            logo, {
+                opacity: 0,
+                scale: 0.4
+            }, {
+                opacity: 1,
+                scale: 1,
+                duration: video.duration,
+                ease: easeInOut
+            }
+        );
     }
 
     function animButtons() {
@@ -89,7 +94,7 @@ window.addEventListener('DOMContentLoaded', function(){
             }, {
                 opacity: 1,
                 duration: .3,
-                delay: 1,
+                delay: 6,
                 ease: easeInOut
             }
         );
