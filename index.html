@@ -42,7 +42,29 @@
 
             <canvas class="canvas"></canvas>
 
-            <div id="over_video">Look at me</div>
+            <div id="over_video">
+                <table>
+                    <tr>
+                        <td align="center">
+                            <main>
+                                <figure class="logo">
+                                    <img src="./assets/image/kyivspeed-white@3x.png" alt="logo">
+                                </figure>
+                                <div class="buttons">
+                                    <figure>
+                                        <img src="./assets/image/available-on-the-app-store-badge-logo-vector.png"
+                                            alt="apple">
+                                    </figure>
+                                    <figure>
+                                        <img src="./assets/image/get-it-on-google-play-vector.png" alt="google">
+                                    </figure>
+                                </div>
+                            </main>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
         </div>
 
     <script src="./assets/js/canvas-video-player.js"></script>
@@ -62,6 +84,8 @@
                 pauseOnClick: false,
                 audio: false
             });
+
+            canvasVideo.play();
 
         // } else {
 
