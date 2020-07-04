@@ -85,6 +85,7 @@ window.addEventListener('DOMContentLoaded', function(){
     }
 
     function animLogo() {
+        console.log('animation logo');
         logoAnim.from(logo, video.duration, {
             opacity: 0,
             scale: 0.4,
