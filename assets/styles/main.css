@@ -152,6 +152,12 @@ button {
     .logo {
         width: 50vw;
     }
+
+    .buttons {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
 }
 
 @media only screen and (min-width: 900px) {

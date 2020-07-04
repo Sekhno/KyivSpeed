@@ -18,7 +18,9 @@ window.addEventListener('DOMContentLoaded', function(){
     
     console.log(video.getBoundingClientRect());
 
-    
+    logoAnim.set(logo, {
+        opacity: 0
+    });
 
     if (promise !== undefined) {
         promise.then(_ => {
@@ -26,15 +28,17 @@ window.addEventListener('DOMContentLoaded', function(){
             console.log('Autoplay started!');
             animLogo();
             paintVideo();
-            
+            // onTimeupdate();
+            animButtons();
         }).catch(error => {
             console.log(error);
             // Autoplay was prevented.
             // Show a "Play" button so that user can start playback.
             enter.style.visibility = 'visible';
             enter.addEventListener('click', function listener(){
-                video.play();
+                // video.play();
                 animLogo();
+                animButtons();
                 this.style.visibility = 'hidden';
                 this.removeEventListener('click', listener, false);
             }, false)
@@ -46,22 +50,24 @@ window.addEventListener('DOMContentLoaded', function(){
     });
 
     // WORK!
-    video.addEventListener('timeupdate', function listener() {
-        console.log(this.currentTime);
-        if (this.currentTime > 6) {
-            buttonsAnim.fromTo(
-                buttons, {
-                    opacity: 0,
-                }, {
-                    opacity: 1,
-                    duration: .3,
-                    ease: easeInOut
-                }
-            );
-            this.removeEventListener('timeupdate', listener, false);
-            
-        }
-    }, false);
+    // function onTimeupdate() {
+    //     video.addEventListener('timeupdate', function listener() {
+    //         console.log(this.currentTime);
+    //         if (this.currentTime > 6) {
+    //             buttonsAnim.fromTo(
+    //                 buttons, {
+    //                     opacity: 0,
+    //                 }, {
+    //                     opacity: 1,
+    //                     duration: .3,
+    //                     ease: easeInOut
+    //                 }
+    //             );
+    //             this.removeEventListener('timeupdate', listener, false);
+
+    //         }
+    //     }, false);
+    // }
 
     video.addEventListener('ended', function listener() {
         console.log('Ended!')
@@ -86,6 +92,11 @@ window.addEventListener('DOMContentLoaded', function(){
 
     function animLogo() {
         console.log('animation logo');
+
+        logoAnim.set(logo, {
+            opacity: 1
+        });
+
         logoAnim.from(logo, video.duration, {
             opacity: 0,
             scale: 0.4,
@@ -95,6 +106,19 @@ window.addEventListener('DOMContentLoaded', function(){
             transformOrigin: 'bottom',
             transformStyle: 'preserve-3d'
         });
+    }
+
+    function animButtons() {
+        buttonsAnim.fromTo(
+            buttons, {
+                opacity: 0,
+            }, {
+                opacity: 1,
+                duration: .3,
+                delay: 6,
+                ease: easeInOut
+            }
+        );
     }
     
 })
