@@ -24,17 +24,7 @@ window.addEventListener('DOMContentLoaded', function(){
         promise.then(_ => {
             // Autoplay started!
             console.log('Autoplay started!');
-            logoAnim.from(logo, video.duration, {
-                opacity: 0,
-                scale: 0.4,
-                ease: easeInOut,
-                delay: 1,
-                rotationX: 270, 
-                transformOrigin: 'bottom', 
-                transformStyle: 'preserve-3d'
-            });
-            console.log(video.videoWidth);
-
+            animLogo();
             paintVideo();
             
         }).catch(error => {
@@ -44,9 +34,9 @@ window.addEventListener('DOMContentLoaded', function(){
             enter.style.visibility = 'visible';
             enter.addEventListener('click', function listener(){
                 video.play();
+                animLogo();
                 this.style.visibility = 'hidden';
                 this.removeEventListener('click', listener, false);
-
             }, false)
         });
     }
@@ -92,6 +82,18 @@ window.addEventListener('DOMContentLoaded', function(){
                 requestAnimationFrame(paintVideo);
             }
         }
+    }
+
+    function animLogo() {
+        logoAnim.from(logo, video.duration, {
+            opacity: 0,
+            scale: 0.4,
+            ease: easeInOut,
+            delay: 1,
+            rotationX: 270,
+            transformOrigin: 'bottom',
+            transformStyle: 'preserve-3d'
+        });
     }
     
 })
