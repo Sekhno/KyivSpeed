@@ -2,6 +2,7 @@ window.addEventListener('DOMContentLoaded', function(){
     console.log('DOMContentLoaded');
 
     var video = document.getElementById('video'),
+        enter = document.getElementById('enter'),
         buttons = document.querySelectorAll('.buttons'),
         promise = video.play(),
         logo = document.querySelector('.logo'),
@@ -33,6 +34,12 @@ window.addEventListener('DOMContentLoaded', function(){
             console.log(error);
             // Autoplay was prevented.
             // Show a "Play" button so that user can start playback.
+            enter.style.visibility = 'visible';
+            enter.addEventListener('click', function listener(){
+                video.play();
+                this.style.visibility = 'hidden';
+                this.removeEventListener('click', listener, false);
+            }, false)
         });
     }
 
