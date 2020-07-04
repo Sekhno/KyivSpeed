@@ -34,14 +34,16 @@ window.addEventListener('DOMContentLoaded', function(){
             console.log(error);
             // Autoplay was prevented.
             // Show a "Play" button so that user can start playback.
-            enter.style.visibility = 'visible';
-            enter.addEventListener('click', function listener(){
-                // video.play();
-                animLogo();
-                animButtons();
-                this.style.visibility = 'hidden';
-                this.removeEventListener('click', listener, false);
-            }, false)
+            animLogo();
+            animButtons();
+            // enter.style.visibility = 'visible';
+            // enter.addEventListener('click', function listener(){
+            //     // video.play();
+            //     animLogo();
+            //     animButtons();
+            //     this.style.visibility = 'hidden';
+            //     this.removeEventListener('click', listener, false);
+            // }, false)
         });
     }
 
