@@ -3,7 +3,7 @@ window.addEventListener('DOMContentLoaded', function(){
 
     var video = document.getElementById('video'),
         canvas = document.getElementById('canvas'),
-        enter = document.getElementById('enter'),
+        // enter = document.getElementById('enter'),
         buttons = document.querySelectorAll('.buttons'),
         promise = video.play(),
         logo = document.querySelector('.logo'),
@@ -28,7 +28,6 @@ window.addEventListener('DOMContentLoaded', function(){
             console.log('Autoplay started!');
             animLogo();
             paintVideo();
-            // onTimeupdate();
             animButtons();
         }).catch(error => {
             console.log(error);
@@ -36,40 +35,12 @@ window.addEventListener('DOMContentLoaded', function(){
             // Show a "Play" button so that user can start playback.
             animLogo();
             animButtons();
-            // enter.style.visibility = 'visible';
-            // enter.addEventListener('click', function listener(){
-            //     // video.play();
-            //     animLogo();
-            //     animButtons();
-            //     this.style.visibility = 'hidden';
-            //     this.removeEventListener('click', listener, false);
-            // }, false)
         });
     }
 
     buttonsAnim.set(buttons, {
         opacity: 0
     });
-
-    // WORK!
-    // function onTimeupdate() {
-    //     video.addEventListener('timeupdate', function listener() {
-    //         console.log(this.currentTime);
-    //         if (this.currentTime > 6) {
-    //             buttonsAnim.fromTo(
-    //                 buttons, {
-    //                     opacity: 0,
-    //                 }, {
-    //                     opacity: 1,
-    //                     duration: .3,
-    //                     ease: easeInOut
-    //                 }
-    //             );
-    //             this.removeEventListener('timeupdate', listener, false);
-
-    //         }
-    //     }, false);
-    // }
 
     video.addEventListener('ended', function listener() {
         console.log('Ended!')
