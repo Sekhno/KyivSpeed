@@ -58,6 +58,10 @@ button {
     width: 25vw;
 }
 
+.logo img {
+    width: 100%;
+}
+
 .buttons {
     position: absolute;
     width: 100%;
