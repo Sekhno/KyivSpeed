@@ -33,7 +33,7 @@ window.addEventListener('DOMContentLoaded', function(){
             console.log(error);
             // Autoplay was prevented.
             // Show a "Play" button so that user can start playback.
-            animLogo();
+            // animLogo();
             animButtons();
         });
     }
@@ -89,7 +89,7 @@ window.addEventListener('DOMContentLoaded', function(){
             }, {
                 opacity: 1,
                 duration: .3,
-                delay: 6,
+                delay: 1,
                 ease: easeInOut
             }
         );
