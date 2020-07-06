@@ -36,10 +36,10 @@ figure {
 #over_video {
     position: absolute;
     width: 100%;
-    height: 100vh;
+    height: 70vh;
     top: 0;
     z-index: 10;
-    /* margin-top: 30%; */
+    margin-top: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -48,7 +48,7 @@ figure {
 
 .wrapper-buttons {
     display: inherit;
-    justify-content: space-between;
+    justify-content: space-around;
     margin-bottom: -30%;
 }
 
@@ -58,7 +58,6 @@ figure {
 }
 
 .button {
-    /* width: 200px; */
     cursor: pointer;
     width: 45%;
 }
@@ -101,7 +100,7 @@ img {
 
 @media only screen and (min-width: 768px) {
     #over_video {
-        margin-top: 100px;
+        margin-top: 20vh;
     }
 
     .canvas,
