@@ -24,7 +24,7 @@ figure {
 
 .canvas,
 .video {
-    height: 70vh;
+    height: 90vh;
     left: 0;
     position: absolute;
     top: 0;
@@ -50,6 +50,8 @@ figure {
     display: inherit;
     justify-content: space-around;
     margin-bottom: -30%;
+    width: 100vw;
+    max-width: 600px;
 }
 
 .logo {
@@ -69,8 +71,8 @@ img {
 
 @media screen and (max-height: 500px) {
     #over_video {
-        margin-top: 2%;
-        height: 100vh;
+        margin-top: 2% !important;
+        height: 100vh !important;
     }
 
     .logo {
@@ -105,7 +107,7 @@ img {
     }
 
     .wrapper-buttons {
-        width: 600px;
+        /* width: 600px; */
         margin-bottom: 0;
     }
 }
