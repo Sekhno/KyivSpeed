@@ -70,7 +70,7 @@ img {
 
 @media screen and (max-height: 500px) {
     #over_video {
-        margin-top: 0;
+        margin-top: 2%;
         height: 100vh;
     }
 
