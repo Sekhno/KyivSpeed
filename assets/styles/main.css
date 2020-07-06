@@ -24,7 +24,7 @@ figure {
 
 .canvas,
 .video {
-    height: 100%;
+    height: 100vh;
     left: 0;
     position: absolute;
     top: 0;
@@ -100,7 +100,15 @@ img {
 
     .canvas,
     .video {
-        height: 100vh;
+        height: 100%;
+    }
+
+    .button {
+        width: 200px;
+    }
+
+    .wrapper-buttons {
+        width: 600px;
     }
 }
 
