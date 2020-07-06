@@ -87,20 +87,12 @@ img {
     }
 }
 
-@media only screen and (min-width: 900px) {
 
-    #over_video {
-        margin-top: 0;
-    }
-
-    .logo {
-        width: 500px;
-    }
-}
 
 @media only screen and (min-width: 768px) {
     #over_video {
         margin-top: 20vh;
+        height: 50vh;
     }
 
     .canvas,
@@ -115,6 +107,17 @@ img {
     .wrapper-buttons {
         width: 600px;
         margin-bottom: 0;
+    }
+}
+
+@media only screen and (min-width: 900px) {
+
+    #over_video {
+        height: 60vh;
+    }
+
+    .logo {
+        width: 500px;
     }
 }
 
