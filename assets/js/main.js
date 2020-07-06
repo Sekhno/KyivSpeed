@@ -23,7 +23,7 @@
             opacity: 0
         });
 
-        timeline.from(logo, 6, {
+        timeline.from(logo, 7, {
             opacity: 0,
             scale: 0,
             ease: easeInOut,
@@ -34,7 +34,7 @@
         }).then(function(){
             timeline.to(buttons, .2, {
                 opacity: 1
-            })
+            });
         });
     
 }());

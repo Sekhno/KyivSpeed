@@ -12,6 +12,10 @@ body {
     overflow: hidden;
 }
 
+figure {
+    margin: 0;
+}
+
 .video-responsive {
     padding-bottom: 56.25%;
     position: relative;
@@ -44,15 +48,18 @@ body {
 
 .wrapper-buttons {
     display: inherit;
+    justify-content: space-between;
 }
 
 .logo {
-    width: 100%;
+    width: 80%;
+    margin: auto;
 }
 
 .button {
-    width: 200px;
+    /* width: 200px; */
     cursor: pointer;
+    width: 45%;
 }
 
 img {
