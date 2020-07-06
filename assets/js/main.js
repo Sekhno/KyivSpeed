@@ -23,14 +23,18 @@
             opacity: 0
         });
 
-        timeline.from(logo, 7, {
+        timeline.set(logo, {
+            opacity: 0
+        })
+
+        timeline.from(logo, 5, {
             opacity: 0,
-            scale: 0,
+            scale: 0.4,
             ease: easeInOut,
             delay: -1,
-            rotationX: 270,
-            transformOrigin: 'center',
-            transformStyle: 'preserve-3d'
+            // rotationX: 270,
+            // transformOrigin: 'center',
+            // transformStyle: 'preserve-3d'
         }).then(function(){
             timeline.to(buttons, .2, {
                 opacity: 1
