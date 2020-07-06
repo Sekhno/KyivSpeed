@@ -43,59 +43,24 @@
             <canvas class="canvas"></canvas>
 
             <div id="over_video">
-                <table>
-                    <tr>
-                        <td align="center">
-                            <main>
-                                <figure class="logo">
-                                    <img src="./assets/image/kyivspeed-white@3x.png" alt="logo">
-                                </figure>
-                                <div class="buttons">
-                                    <figure>
-                                        <img src="./assets/image/available-on-the-app-store-badge-logo-vector.png"
-                                            alt="apple">
-                                    </figure>
-                                    <figure>
-                                        <img src="./assets/image/get-it-on-google-play-vector.png" alt="google">
-                                    </figure>
-                                </div>
-                            </main>
-
-                        </td>
-                    </tr>
-                </table>
+                <div class="wrapper-logo">
+                    <figure class="logo">
+                        <img src="./assets/image/kyivspeed-white@3x.png" alt="logo">
+                    </figure>
+                </div>
+                <div class="wrapper-buttons">
+                    <figure class="button">
+                        <img src="./assets/image/available-on-the-app-store-badge-logo-vector.png" alt="apple">
+                    </figure>
+                    <figure class="button">
+                        <img src="./assets/image/get-it-on-google-play-vector.png" alt="google">
+                    </figure>
+                </div>
             </div>
         </div>
 
     <script src="./assets/js/canvas-video-player.js"></script>
-
-
-    <script>
-        var isIOS = /iPad|iPhone|iPod/.test(navigator.platform);
-
-        // if (isIOS) {
-
-            var canvasVideo = new CanvasVideoPlayer({
-                videoSelector: '.video',
-                canvasSelector: '.canvas',
-                timelineSelector: false,
-                autoplay: true,
-                makeLoop: true,
-                pauseOnClick: false,
-                audio: false
-            });
-
-            canvasVideo.play();
-
-        // } else {
-
-            // Use HTML5 video
-            // document.querySelectorAll('.canvas')[0].style.display = 'none';
-
-        // }
-    </script>
-
-    <!-- <script src="./assets/js/gsap.js"></script>
-    <script src="./assets/js/main.js"></script> -->
+    <script src="./assets/js/gsap.js"></script>
+    <script src="./assets/js/main.js"></script>
 </body>
 </html>
