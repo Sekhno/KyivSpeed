@@ -70,15 +70,16 @@ img {
 @media screen and (max-height: 500px) {
     #over_video {
         margin-top: 0;
+        height: 100vh;
     }
 
     .logo {
         width: 80%;
     }
 
-    .wrapper-buttons {
+    /* .wrapper-buttons {
         margin-top: -100px;
-    }
+    } */
 }
 
 @media only screen and (min-width: 900px) {
@@ -95,6 +96,11 @@ img {
 @media only screen and (min-width: 768px) {
     #over_video {
         margin-top: 100px;
+    }
+
+    .canvas,
+    .video {
+        height: 100vh;
     }
 }
 
