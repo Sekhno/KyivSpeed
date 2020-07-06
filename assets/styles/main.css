@@ -78,9 +78,14 @@ img {
         width: 80%;
     }
 
-    /* .wrapper-buttons {
-        margin-top: -100px;
-    } */
+    .wrapper-buttons {
+        margin-bottom: 0;
+        width: 60%;
+    }
+
+    .button {
+        width: 40%;
+    }
 }
 
 @media only screen and (min-width: 900px) {
