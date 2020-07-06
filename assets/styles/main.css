@@ -107,7 +107,7 @@ img {
     }
 
     .wrapper-buttons {
-        /* width: 600px; */
+        justify-content: space-between;
         margin-bottom: 0;
     }
 }
