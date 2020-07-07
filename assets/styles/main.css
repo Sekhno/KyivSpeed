@@ -16,6 +16,10 @@ figure {
     margin: 0;
 }
 
+img {
+    width: 100%;
+}
+
 .video-responsive {
     padding-bottom: 56.25%;
     position: relative;
@@ -46,12 +50,42 @@ figure {
     align-items: center;
 }
 
+.wrapper-logo {
+    margin-top: 30%;
+}
+
 .wrapper-buttons {
     display: inherit;
     justify-content: space-around;
-    margin-bottom: -30%;
+    margin-top: 20%;
     width: 100vw;
     max-width: 600px;
+}
+
+.wrapper-buttons a {
+    position: relative;
+    display: block;
+    width: 240px;
+    height: 71px;
+}
+
+.wrapper-buttons img {
+    position: absolute;
+    width: 100%;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    filter: drop-shadow(0px 0px 0px rgba(255, 255, 255, 0.8));
+    -webkit-filter: drop-shadow(0px 0px 0px rgba(255, 255, 255, 0.8));
+    -webkit-transition: filter 0.5s linear;
+    -o-transition: filter 0.2s linear;
+    transition: filter 0.2s linear;
+    will-change: filter;
+}
+
+.wrapper-buttons a:hover img {
+    -webkit-filter: drop-shadow(0px 0px 8px rgba(255, 255, 255, 0.8));
+    filter: drop-shadow(0px 0px 8px rgba(255, 255, 255, 0.8));
 }
 
 .logo {
@@ -59,7 +93,7 @@ figure {
     margin: auto;
 }
 
-.button {
+/* .button {
     cursor: pointer;
     width: 45%;
 }
@@ -67,7 +101,7 @@ figure {
 img {
     width: 100%;
     margin: auto;
-}
+} */
 
 @media screen and (max-height: 500px) {
     #over_video {
@@ -84,9 +118,9 @@ img {
         width: 60%;
     }
 
-    .button {
+    /* .button {
         width: 40%;
-    }
+    } */
 }
 
 
@@ -102,9 +136,9 @@ img {
         height: 100%;
     }
 
-    .button {
+    /* .button {
         width: 200px;
-    }
+    } */
 
     .wrapper-buttons {
         justify-content: space-between;
@@ -120,6 +154,16 @@ img {
 
     .logo {
         width: 500px;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .wrapper-logo {
+        margin-top: 5%;
+    }
+
+    .wrapper-buttons {
+        margin-top: 5%;
     }
 }
 
