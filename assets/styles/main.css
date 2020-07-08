@@ -1,3 +1,8 @@
+@font-face {
+    font-family: NFS;
+    src: url(../font/nfs_font.ttf);
+}
+
 html, body {
     height: 100%;
 }
@@ -10,6 +15,7 @@ body {
     margin: 0;
     background-color: black;
     overflow: hidden;
+    font-family: NFS;
 }
 
 figure {
@@ -54,6 +60,38 @@ img {
     margin-top: 30%;
 }
 
+.wrapper-logo div {
+    position: relative;
+    color: white;
+    font-size: 18vw;
+    line-height: .75;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+    transform: translateX(-21%);
+}
+
+.wrapper-logo div:before {
+    content: attr(data-local);
+    position: absolute;
+    color: rgba(255, 255, 255, 0.2);
+    transform-origin: bottom;
+    font-size: inherit;
+    letter-spacing: 4px;
+}
+
+.wrapper-logo div:nth-child(1):before {
+    transform: rotateX(56deg) scaleX(1.3) translate(11%, -2%);
+    -webkit-transform: rotateX(56deg) scaleX(1.3) translate(11%, -2%);
+}
+
+.wrapper-logo div:nth-child(2):before {
+    transform: rotateX(56deg) scaleX(1) translate(4%, -2%);
+    -webkit-transform: rotateX(56deg) scaleX(1) translate(4%, -2%);
+}
+
+
+
 .wrapper-buttons {
     display: inherit;
     justify-content: space-around;
@@ -93,16 +131,6 @@ img {
     margin: auto;
 }
 
-/* .button {
-    cursor: pointer;
-    width: 45%;
-}
-
-img {
-    width: 100%;
-    margin: auto;
-} */
-
 @media screen and (max-height: 500px) {
     #over_video {
         margin-top: 2% !important;
@@ -117,10 +145,6 @@ img {
         margin-bottom: 0;
         width: 60%;
     }
-
-    /* .button {
-        width: 40%;
-    } */
 }
 
 
@@ -136,13 +160,13 @@ img {
         height: 100%;
     }
 
-    /* .button {
-        width: 200px;
-    } */
-
     .wrapper-buttons {
         justify-content: space-between;
         margin-bottom: 0;
+    }
+
+    .wrapper-logo div {
+        font-size: 100px;
     }
 }
 
