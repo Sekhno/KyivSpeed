@@ -1,8 +1,3 @@
-@font-face {
-    font-family: NFS;
-    src: url(../font/nfs_font.ttf);
-}
-
 html, body {
     height: 100%;
 }
@@ -15,7 +10,6 @@ body {
     margin: 0;
     background-color: black;
     overflow: hidden;
-    font-family: NFS;
 }
 
 figure {
@@ -60,44 +54,15 @@ img {
     margin-top: 30%;
 }
 
-.wrapper-logo div {
-    position: relative;
-    color: white;
-    font-size: 18vw;
-    line-height: .75;
-    -moz-user-select: none;
-    -khtml-user-select: none;
-    user-select: none;
-    transform: translateX(-21%);
-}
-
-.wrapper-logo div:before {
-    content: attr(data-local);
-    position: absolute;
-    color: rgba(255, 255, 255, 0.2);
-    transform-origin: bottom;
-    font-size: inherit;
-    letter-spacing: 4px;
-}
-
-.wrapper-logo div:nth-child(1):before {
-    transform: rotateX(56deg) scaleX(1.3) translate(11%, -2%);
-    -webkit-transform: rotateX(56deg) scaleX(1.3) translate(11%, -2%);
-}
-
-.wrapper-logo div:nth-child(2):before {
-    transform: rotateX(56deg) scaleX(1) translate(4%, -2%);
-    -webkit-transform: rotateX(56deg) scaleX(1) translate(4%, -2%);
-}
-
-
-
 .wrapper-buttons {
     display: inherit;
     justify-content: space-around;
     margin-top: 20%;
     width: 100vw;
     max-width: 600px;
+    opacity: 0;
+    animation: fade ease forwards .5s;
+    animation-delay: 4s;
 }
 
 .wrapper-buttons a {
@@ -127,23 +92,64 @@ img {
 }
 
 .logo {
-    width: 70%;
+    width: 70vw;
     margin: auto;
+}
+
+.st0 {
+    opacity: 0.3;
+}
+
+.st1 {
+    fill: #B0B0B1;
+}
+
+.st2 {
+    fill: #FFFFFF;
+} 
+
+.st1 {
+    display: inline;
+    fill: transparent;
+}
+
+.st2 {
+    display: inline;
+    fill: transparent;
+    stroke: #FFFFFF;
+    stroke-width: 3;
+    stroke-miterlimit: 10;
+}
+
+#logo .st2 {
+    stroke-dasharray: 1047px;
+    stroke-dashoffset: 1047px;
+    animation: fadeZ ease forwards 2s, line-animation ease forwards 4s, box-shadow 2s ease forwards 4s;
+    transform-origin: center;
+}
+
+#logo .st1 {
+    animation: box-shadow ease forwards 2s;
+    animation-delay: 4s;
 }
 
 @media screen and (max-height: 500px) {
     #over_video {
-        margin-top: 2% !important;
-        height: 100vh !important;
+        margin-top: 0 !important;
     }
 
     .logo {
-        width: 80%;
+        width: 50vw;
     }
 
     .wrapper-buttons {
+        margin-top: 0;
         margin-bottom: 0;
         width: 60%;
+    }
+
+    .wrapper-logo {
+        margin-top: 0;
     }
 }
 
@@ -163,10 +169,6 @@ img {
     .wrapper-buttons {
         justify-content: space-between;
         margin-bottom: 0;
-    }
-
-    .wrapper-logo div {
-        font-size: 100px;
     }
 }
 
@@ -190,6 +192,50 @@ img {
         margin-top: 5%;
     }
 }
+
+
+
+
+@keyframes line-animation {
+    from {
+        stroke-dasharray: 500px;
+        stroke-dashoffset: 100%;
+    }
+
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes box-shadow {
+    to {
+        fill: white;
+        stroke: none;
+    }
+}
+
+@keyframes fadeZ {
+    from {
+        transform: scale(0.4);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+
 
 
 
