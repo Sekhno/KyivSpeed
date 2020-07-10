@@ -60,9 +60,9 @@ img {
     margin-top: 20%;
     width: 100vw;
     max-width: 600px;
-    opacity: 0;
+    /* opacity: 0;
     animation: fade ease forwards .5s;
-    animation-delay: 4s;
+    animation-delay: 4s; */
 }
 
 .wrapper-buttons a {
@@ -108,7 +108,7 @@ img {
     fill: #FFFFFF;
 } 
 
-.st1 {
+/* .st1 {
     display: inline;
     fill: transparent;
 }
@@ -119,9 +119,9 @@ img {
     stroke: #FFFFFF;
     stroke-width: 3;
     stroke-miterlimit: 10;
-}
+} */
 
-#logo .st2 {
+/* #logo .st2 {
     stroke-dasharray: 1047px;
     stroke-dashoffset: 1047px;
     animation: fadeZ ease forwards 2s, line-animation ease forwards 4s, box-shadow 2s ease forwards 4s;
@@ -131,7 +131,12 @@ img {
 #logo .st1 {
     animation: box-shadow ease forwards 2s;
     animation-delay: 4s;
-}
+} */
+
+/* .st2 {
+    stroke: #88CE02;
+    stroke-width: 5px;
+} */
 
 @media screen and (max-height: 500px) {
     #over_video {
@@ -196,7 +201,7 @@ img {
 
 
 
-@keyframes line-animation {
+/* @keyframes line-animation {
     from {
         stroke-dasharray: 500px;
         stroke-dashoffset: 100%;
@@ -232,7 +237,7 @@ img {
     to {
         opacity: 1;
     }
-}
+} */
 
 
 
