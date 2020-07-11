@@ -107,25 +107,34 @@ img {
     fill: #FFFFFF;
 } 
 
-@media screen and (max-height: 500px) {
+@media (orientation: landscape) {
     #over_video {
         margin-top: 0 !important;
+        height: 80%;
     }
 
     .logo {
-        width: 50vw;
+        width: 80vh;
     }
 
     .wrapper-buttons {
         margin-top: 0;
         margin-bottom: 0;
         width: 60%;
+        justify-content: space-between;
+        margin-bottom: 0;
+        flex-direction: row;
+        align-items: inherit;
     }
 
     .wrapper-logo {
         margin-top: 0;
     }
 }
+
+/* @media screen and (max-height: 500px) {
+    
+} */
 
 
 
