@@ -107,7 +107,7 @@ img {
     fill: #FFFFFF;
 } 
 
-@media (orientation: landscape) {
+@media (orientation: landscape) and (max-height: 500px) {
     #over_video {
         margin-top: 0 !important;
         height: 80%;
