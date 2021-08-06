@@ -96,11 +96,11 @@ img {
 }
 
 .logo__st0 {
-    opacity: 0.3;
+    /* opacity: 0.3; */
 }
 
 .logo__st1 {
-    fill: #B0B0B1;
+    fill: #FFFFFF;
 }
 
 .logo__st2 {
